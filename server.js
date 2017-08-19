@@ -1,4 +1,6 @@
 var express = require('express'); // access the npm express package
+var path = require('path');
+var parser = require('body-parser');
 
 var port = process.env.PORT || 3000;
 
