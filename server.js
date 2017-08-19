@@ -1,11 +1,18 @@
-var express = require('express');
+var express = require('express'); // access the npm express package
 
-var app = express();
+var app = express(); // create an app instance of express.js
 
-app.get('/', function (request, response){
-  response.sendfile(__dirname + '/app/public/home.html');
+// direct GET request to the  home page
+app.get('/', function (req, res){
+  res.sendfile(__dirname + '/app/public/home.html');
 });
 
+// direct GET requests for the survey page
+app.get('/survey.html', function (req, res){
+  res.sendfile(__dirname + '/app/public/survey.html');
+});
+
+// event listener on port 8080
 app.listen(8080, function(){
   console.log("Shhh, were listening on port 8080");
 });
