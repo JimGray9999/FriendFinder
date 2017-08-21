@@ -18,12 +18,13 @@ var router = express.Router();
 // direct GET request to the home page
 router.route('/') 
   .get(function (req, res){
-  res.sendfile(path.join(__dirname , 'app', 'public', 'home.html'));
+    res.sendfile(path.join(__dirname , 'app', 'public', 'home.html'));
   })
 
 // direct GET requests for the survey page
-app.get('/survey.html', function (req, res){
-  res.sendfile(path.join(__dirname , 'app', 'public', 'survey.html'));
-});
+router.route('/survey.html')
+  .get(function (req, res){
+    res.sendfile(path.join(__dirname , 'app', 'public', 'survey.html'));
+  })
 
 module.exports = router;
