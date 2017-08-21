@@ -1,6 +1,6 @@
 var express = require('express'); // access the npm express package
 var path = require('path');
-var parser = require('body-parser');
+var bodyParser = require('body-parser');
 var app = express(); // create an app instance of express.js
 
 // Sets up the Express app to handle data parsing
@@ -15,16 +15,16 @@ app.use(bodyParser.json({
 
 var router = express.Router();
 
-// direct GET request to the home page
-router.route('/') 
+module.exports = function(app) {
+  // direct GET request to the home page
+  router.route('/') 
   .get(function (req, res){
     res.sendfile(path.join(__dirname , 'app', 'public', 'home.html'));
   })
 
-// direct GET requests for the survey page
-router.route('/survey.html')
+  // direct GET requests for the survey page
+  router.route('/survey.html')
   .get(function (req, res){
     res.sendfile(path.join(__dirname , 'app', 'public', 'survey.html'));
   })
-
-module.exports = router;
+  };

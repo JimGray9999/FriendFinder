@@ -1,6 +1,6 @@
 var express = require('express'); // access the npm express package
 var path = require('path');
-var parser = require('body-parser');
+var bodyParser = require('body-parser');
 var app = express(); // create an app instance of express.js
 
 // Sets up the Express app to handle data parsing
@@ -15,6 +15,8 @@ app.use(bodyParser.json({
 
 var router = express.Router();
 
-// display a GET request for all of the current friends listed in the JSON (data/friends.js)
 
-module.exports = router;
+module.exports = function(app) {
+  
+// display a GET request for all of the current friends listed in the JSON (data/friends.js)
+};
