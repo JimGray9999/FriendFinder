@@ -20,8 +20,44 @@
       </div>
     </div>
     <div class="container">
+        <div class="row">
+          <div id="question1" class="input-field col s4">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Meh, neutral.</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 Strongly Agree. 1000x Yes!</option>
+              </select>
+              <label>Question #1</label>
+          </div>
+          <div id="question2" class="input-field col s4">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1 Strongly Disagree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Meh, neutral.</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 Strongly Agree. 1000x Yes!</option>
+              </select>
+              <label>Question #2</label>
+          </div>
+        </div>
+      </div>
+    <div class="container">
       <div class="row">
-        <div class="input-field col s4">
+        <div id="question1" class="input-field col s4">
             <select>
               <option value="" disabled selected>Choose your option</option>
               <option value="1">1 Strongly Disagree</option>
@@ -37,7 +73,7 @@
             </select>
             <label>Question #1</label>
         </div>
-        <div class="input-field col s4">
+        <div id="question2" class="input-field col s4">
             <select>
               <option value="" disabled selected>Choose your option</option>
               <option value="1">1 Strongly Disagree</option>
@@ -57,7 +93,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="input-field col s4">
+        <div id="question3" class="input-field col s4">
             <select>
               <option value="" disabled selected>Choose your option</option>
               <option value="1">1 Strongly Disagree</option>
@@ -73,7 +109,7 @@
             </select>
             <label>Question #3</label>
         </div>
-        <div class="input-field col s4">
+        <div id="question4" class="input-field col s4">
             <select>
               <option value="" disabled selected>Choose your option</option>
               <option value="1">1 Strongly Disagree</option>
@@ -93,7 +129,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="input-field col s4">
+        <div id="question5" class="input-field col s4">
             <select>
               <option value="" disabled selected>Choose your option</option>
               <option value="1">1 Strongly Disagree</option>
@@ -109,7 +145,7 @@
             </select>
             <label>Question #5</label>
         </div>
-        <div class="input-field col s4">
+        <div id="question6" class="input-field col s4">
             <select>
               <option value="" disabled selected>Choose your option</option>
               <option value="1">1 Strongly Disagree</option>
@@ -129,7 +165,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="input-field col s4">
+        <div id="question7" class="input-field col s4">
             <select>
               <option value="" disabled selected>Choose your option</option>
               <option value="1">1 Strongly Disagree</option>
@@ -143,12 +179,12 @@
               <option value="9">9</option>
               <option value="10">10 Strongly Agree. 1000x Yes!</option>
             </select>
-            <label>Question #7</label>
+            <label>I would NEVER put pineapple and ham on a pizza.</label>
         </div>
-        <div class="input-field col s4">
+        <div id="question8" class="input-field col s4">
             <select>
               <option value="" disabled selected>Choose your option</option>
-              <option value="1">1 Strongly Disagree</option>
+              <option value="1">1 Strongly Disagree!</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -159,16 +195,16 @@
               <option value="9">9</option>
               <option value="10">10 Strongly Agree. 1000x Yes!</option>
             </select>
-            <label>Question #8</label>
+            <label>I space my code with tabs.</label>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="input-field col s4">
+        <div id="question9" class="input-field col s4">
             <select>
               <option value="" disabled selected>Choose your option</option>
-              <option value="1">1 Strongly Disagree</option>
+              <option value="1">1 Strongly Disagree!</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -179,12 +215,12 @@
               <option value="9">9</option>
               <option value="10">10 Strongly Agree. 1000x Yes!</option>
             </select>
-            <label>Question #9</label>
+            <label>I always put the toilet paper roll overhanded.</label>
         </div>
-        <div class="input-field col s4">
+        <div id="question10" class="input-field col s4">
             <select>
               <option value="" disabled selected>Choose your option</option>
-              <option value="1">1 Strongly Disagree</option>
+              <option value="1">1 Strongly Disagree!</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -195,12 +231,12 @@
               <option value="9">9</option>
               <option value="10">10 Strongly Agree. 1000x Yes!</option>
             </select>
-            <label>Question #10</label>
+            <label>Deodorant?</label>
         </div>
       </div>
     </div>
     <div class="container">
-      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <button id="submitResults" class="btn waves-effect waves-light" type="submit" name="action">Submit
         <i class="material-icons right">send</i>
       </button>
     </div>
@@ -208,7 +244,7 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <a class="white-text" href="home.html">Friend Finder</a>
+            <a class="white-text" href="/home">Friend Finder</a>
             <p class="grey-text text-lighten-4">Find a friend, be happy, and stuff.</p>
           </div>
           <div class="col l4 offset-l2 s12">
@@ -233,6 +269,34 @@
   <script type="text/javascript">
     $(document).ready(function() {
     $('select').material_select();
+    
+    var mySurvey = [];
+
+    $('#submitResults').on('click', function() {
+      event.preventDefault();
+
+      var newFriend = [
+        $("#question1").val(),
+        $("#question2").val(),      
+        $("#question3").val(),
+        $("#question4").val(),
+        $("#question5").val(),
+        $("#question6").val(),
+        $("#question7").val(),
+        $("#question8").val(),
+        $("#question9").val(),
+        $("#question10").val()
+    ]
+      console.log(newFriend);
+    });
+    // when the Submit button is clicked
+    // collect the values for the ten questions submitted (1-10)
+    // store in an array
+
+    // compare array to the friends.js json list
+    // least difference
+
+    // modal display the friend match
     });
   </script>
 </body>

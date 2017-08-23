@@ -1,22 +1,18 @@
-var express = require('express'); // access the npm express package
 var path = require('path');
-var bodyParser = require('body-parser');
-var app = express(); // create an app instance of express.js
 
-// Sets up the Express app to handle data parsing
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
-app.use(bodyParser.text());
-app.use(bodyParser.json({
-  type: "application/vnd.api+json"
-}));
-
-var router = express.Router();
-
+// link to the friends.js JSON
+var friendsData = require("../data/friends");
 
 module.exports = function(app) {
-  
-// display a GET request for all of the current friends listed in the JSON (data/friends.js)
+    
+  // display a GET request for all of the current friends listed in the JSON (data/friends.js)
+  app.get("/api/friends", function(req, res) {
+      res.json(friendsData);
+    })
+
+  // use the POST request to add to the friends.js
+  app.post("/api/new", function(req, res) {
+    friendsData.push(req.body);
+    console.log(req.body);
+  })
 };

@@ -9,16 +9,26 @@
   <title>Friend Finder!</title>
 </head>
 <body>
-    <h1>Use The Friend Finder!</h1>
-    <!-- Dropdown Trigger -->
-    <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Let's Do This!</a>
-  
-    <!-- Dropdown Structure -->
-    <ul id='dropdown1' class='dropdown-content'>
-      <li><a href="survey.html">Take The Survey!</a></li>
-      <li class="divider"></li>
-      <li><a href="#!">API Stuff</a></li>
-    </ul> 
+    <div class="row">
+      <div class="col s12 m7">
+        <div class="card hoverable center-align">
+          <div class="card-image">
+              <img src="img/skyline-night.jpg">
+            <span class="card-title"><h1 class='jumbotron center-align'>Use The Friend Finder!</h1></span>
+          </div>
+          <div class="card-content">
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Let's Do This!</a>     
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+              <li><a href="/survey">Take The Survey!</a></li>
+              <li class="divider"></li>
+              <li><a href="/api/friends">API Stuff</a></li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+    </div>
 
   <footer class="page-footer">
       <div class="container">
@@ -41,7 +51,7 @@
         2017 Jim Gray
         </div>
       </div>
-    </footer>
+   </footer>
 
     <!-- Scripts -->
     <!--Import jQuery before materialize.js-->
