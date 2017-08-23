@@ -13,12 +13,26 @@
   <title>Survey</title>
 </head>
 <body>
-    <div class="container">
-      <div class="row">
-        <p>Choose your preferences.</p>
-        <p>Scale of 1 "Strongly Disagree" to 10 "Strongly Agree"</p>
-      </div>
+  <div class="container-fluid">
+    <div class="row">
+      <h3>Please fill out the following 10 questions (honest answers, please).</h3>
+      <p class="center-align">Press Submit when ready, and see your match!</p>
     </div>
+  </div>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Your name here..." id="friend_name" type="text" class="validate">
+          <label for="friend_name">Name (Required)</label>
+        </div>
+        <div class="input-field col s6">
+          <input placeholder="Picture link" id="friend_pic" type="text" class="validate">
+          <label for="friend_pic">Link to Picture (Required)</label>
+        </div>
+      </div>
+    </form>
+  </div>
     <div class="container">
         <div class="row">
           <div id="question1" class="input-field col s4">
@@ -35,7 +49,7 @@
                 <option value="9">9</option>
                 <option value="10">10 Strongly Agree. 1000x Yes!</option>
               </select>
-              <label>Question #1</label>
+              <label>I cut my sandwiches diagonally...</label>
           </div>
           <div id="question2" class="input-field col s4">
               <select>
@@ -275,19 +289,29 @@
     $('#submitResults').on('click', function() {
       event.preventDefault();
 
-      var newFriend = [
-        $("#question1").val(),
-        $("#question2").val(),      
-        $("#question3").val(),
-        $("#question4").val(),
-        $("#question5").val(),
-        $("#question6").val(),
-        $("#question7").val(),
-        $("#question8").val(),
-        $("#question9").val(),
-        $("#question10").val()
-    ]
+      var newFriend = {
+        name: $('#friend_name').val().trim(),
+        photo: $('#friend_pic').val(),
+        scores:[
+        $("#question1 option:selected").val(),
+        $("#question2 option:selected").val(),      
+        $("#question3 option:selected").val(),
+        $("#question4 option:selected").val(),
+        $("#question5 option:selected").val(),
+        $("#question6 option:selected").val(),
+        $("#question7 option:selected").val(),
+        $("#question8 option:selected").val(),
+        $("#question9 option:selected").val(),
+        $("#question10 option:selected").val()
+        ]
+    }
       console.log(newFriend);
+
+      $.post("/api/new", newFriend, 
+      function(data) {
+        console.log("Did a POST thing...");
+        console.log(data);
+      });
     });
     // when the Submit button is clicked
     // collect the values for the ten questions submitted (1-10)
