@@ -33,6 +33,20 @@
       </div>
     </form>
   </div>
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+  
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Say hello to your new friend!</h4>
+        <p id="new-friend">A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Yay...</a>
+      </div>
+    </div>
+
     <div class="container">
       <div class="row">
         <div id="question1" class="input-field col s4">
@@ -268,8 +282,12 @@
       };
 
       $.post("/api/new", newFriend, function(data) {
-        console.log("Did a POST thing...");
-        console.log(data);
+        // take data, update the modal
+        // show the picture
+        console.log(data.name);
+        console.log(data.photo);
+        // launch the modal
+        $('#modal1').modal('open');
       });
     });
     // when the Submit button is clicked
