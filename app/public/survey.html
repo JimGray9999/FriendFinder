@@ -34,42 +34,6 @@
     </form>
   </div>
     <div class="container">
-        <div class="row">
-          <div id="question1" class="input-field col s4">
-              <select>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">1 Strongly Disagree</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 Meh, neutral.</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10 Strongly Agree. 1000x Yes!</option>
-              </select>
-              <label>I cut my sandwiches diagonally...</label>
-          </div>
-          <div id="question2" class="input-field col s4">
-              <select>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">1 Strongly Disagree</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 Meh, neutral.</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10 Strongly Agree. 1000x Yes!</option>
-              </select>
-              <label>Question #2</label>
-          </div>
-        </div>
-      </div>
-    <div class="container">
       <div class="row">
         <div id="question1" class="input-field col s4">
             <select>
@@ -85,7 +49,7 @@
               <option value="9">9</option>
               <option value="10">10 Strongly Agree. 1000x Yes!</option>
             </select>
-            <label>Question #1</label>
+            <label>I cut my sandwiches diagonally...</label>
         </div>
         <div id="question2" class="input-field col s4">
             <select>
@@ -101,7 +65,7 @@
               <option value="9">9</option>
               <option value="10">10 Strongly Agree. 1000x Yes!</option>
             </select>
-            <label>Question #2</label>
+            <label>I believe Question #2 Should be left blank.</label>
         </div>
       </div>
     </div>
@@ -121,7 +85,7 @@
               <option value="9">9</option>
               <option value="10">10 Strongly Agree. 1000x Yes!</option>
             </select>
-            <label>Question #3</label>
+            <label>I'm an Android user, would never buy an iAnything!</label>
         </div>
         <div id="question4" class="input-field col s4">
             <select>
@@ -137,7 +101,7 @@
               <option value="9">9</option>
               <option value="10">10 Strongly Agree. 1000x Yes!</option>
             </select>
-            <label>Question #4</label>
+            <label>I changed my mind, Question #2 should have been offered.</label>
         </div>
       </div>
     </div>
@@ -157,7 +121,7 @@
               <option value="9">9</option>
               <option value="10">10 Strongly Agree. 1000x Yes!</option>
             </select>
-            <label>Question #5</label>
+            <label>Nickelback is the greatest band of the early 21st century!</label>
         </div>
         <div id="question6" class="input-field col s4">
             <select>
@@ -173,7 +137,7 @@
               <option value="9">9</option>
               <option value="10">10 Strongly Agree. 1000x Yes!</option>
             </select>
-            <label>Question #6</label>
+            <label>Question #6 is the greatest question of them all.</label>
         </div>
       </div>
     </div>
@@ -229,7 +193,7 @@
               <option value="9">9</option>
               <option value="10">10 Strongly Agree. 1000x Yes!</option>
             </select>
-            <label>I always put the toilet paper roll overhanded.</label>
+            <label>I always hang the toilet paper roll overhanded.</label>
         </div>
         <div id="question10" class="input-field col s4">
             <select>
@@ -281,10 +245,7 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
   <script type="text/javascript">
-    $(document).ready(function() {
     $('select').material_select();
-    
-    var mySurvey = [];
 
     $('#submitResults').on('click', function() {
       event.preventDefault();
@@ -304,11 +265,9 @@
         $("#question9 option:selected").val(),
         $("#question10 option:selected").val()
         ]
-    }
-      console.log(newFriend);
+      };
 
-      $.post("/api/new", newFriend, 
-      function(data) {
+      $.post("/api/new", newFriend, function(data) {
         console.log("Did a POST thing...");
         console.log(data);
       });
@@ -321,7 +280,6 @@
     // least difference
 
     // modal display the friend match
-    });
   </script>
 </body>
 </html>
