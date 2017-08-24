@@ -33,11 +33,9 @@
       </div>
     </form>
   </div>
-  <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
   
     <!-- Modal Structure -->
-    <div id="modal1" class="modal bottom-sheet">
+    <div id="modal1" class="modal modal-fixed-footer">
       <div class="modal-content">
         <h4>Say hello to your new friend!</h4>
         <p id="new-friend">A bunch of text</p>
@@ -228,7 +226,7 @@
       </div>
     </div>
     <div class="container">
-      <button id="submitResults" class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <button id="submitResults" data-target="modal1" class="btn modal-trigger waves-effect waves-light" type="submit" name="action">Submit
         <i class="material-icons right">send</i>
       </button>
     </div>
@@ -259,6 +257,8 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
   <script type="text/javascript">
+   $(document).ready(function(){
+    $('.modal').modal();
     $('select').material_select();
 
     $('#submitResults').on('click', function() {
@@ -286,18 +286,14 @@
         // show the picture
         console.log(data.name);
         console.log(data.photo);
-        // launch the modal
+
+        var html = "<p>Name: " + data.name;
+        html += '<img src=' + data.photo + ">";
+        $("#new-friend").html();
         $('#modal1').modal('open');
       });
     });
-    // when the Submit button is clicked
-    // collect the values for the ten questions submitted (1-10)
-    // store in an array
-
-    // compare array to the friends.js json list
-    // least difference
-
-    // modal display the friend match
+  });
   </script>
 </body>
 </html>
