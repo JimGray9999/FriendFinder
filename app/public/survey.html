@@ -283,7 +283,7 @@
 
       $.post("/api/new", newFriend, function(data) {
         // create an html element with the match's name and photo
-        var html = "<p>Name: " + data.name;
+        var html = "<p>Meet..." + data.name + "</p>";
         html += '<img src=' + data.photo + ">";
         $("#new-friend").html(html);
         
