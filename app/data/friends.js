@@ -29,6 +29,36 @@ var friendsArray = [
         1,
         1,
         1]
+    },
+    {
+      "name": "Jim",
+      "photo": "is.gd/gKqydf",
+      "scores":[
+        10,
+        1,
+        5,
+        10,
+        1,
+        5,
+        1,
+        10,
+        10,
+        8]
+    },
+    {
+      "name": "SPOOOOON!",
+      "photo": "https://saturdaymourningcartoons.files.wordpress.com/2015/09/the-tick-animated-series.jpg",
+      "scores":[
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10]
     }
   ]
 
