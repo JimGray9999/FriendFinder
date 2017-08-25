@@ -282,15 +282,12 @@
       };
 
       $.post("/api/new", newFriend, function(data) {
-        // take data, update the modal
-        // show the picture
-        console.log(data.name);
-        console.log(data.photo);
-
+        // create an html element with the match's name and photo
         var html = "<p>Name: " + data.name;
         html += '<img src=' + data.photo + ">";
-        $("#new-friend").html();
-        $('#modal1').modal('open');
+        $("#new-friend").html(html);
+        
+        $('#modal1').modal('open'); // display the friend result in a modal
       });
     });
   });
